@@ -1,11 +1,8 @@
 from sqlalchemy import func, create_engine,desc
 from sqlalchemy.orm import sessionmaker
 from main import Subject,Student,Group,Grade,Teacher
+from db_engine import Session, engine
 
-
-engine = create_engine('postgresql://postgres:boba1234@localhost/postgres')
-
-Session = sessionmaker(bind=engine)
 
 session = Session()
 

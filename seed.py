@@ -4,10 +4,7 @@ from sqlalchemy.orm import sessionmaker, relationship
 from faker import Faker
 import random
 from main import Subject,Student,Teacher,Grade,Group
-
-engine = create_engine('postgresql://postgres:boba1234@localhost/postgres')
-
-Session = sessionmaker(bind=engine)
+from db_engine import engine, Session
 
 session = Session()
 
